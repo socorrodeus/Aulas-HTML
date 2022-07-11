@@ -1,0 +1,74 @@
+body {
+    background-color: bisque;
+}
+
+h1 {
+    color: blue;
+}
+
+h2 {
+    color: red;
+    font-family: arial;
+    font-size: 13px;
+}
+
+p {
+    color: green;
+    font-family: arial;
+    font-size: 20px;
+}
+
+h3 {
+    color: blueviolet;
+    font-family: arial;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+span {
+    color: pink;
+    font-weight: bold;
+}
+
+h4{
+    font-weight: lighter;
+    font-style: normal;
+    background: red;
+}
+
+.exemplo{
+    font-family: 'Times New Roman', Times, serif;
+    color: brown;
+    font-size: 40px;
+    font-style: italic;
+}
+
+.exemplo2{
+    color: whitesmoke;
+    font-size: 20;
+    font-style: oblique;
+    background: burlywood;
+}
+
+.centro {
+    background-color: brown;
+    width: 80%;
+    margin: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.exemplo3 {
+    background-color: blue;
+    width: 80%;
+    margin: 50px 50px 50px 50px;
+}
+
+.centro2 {
+    background: red;
+    width: 80%;
+    margin: 20px auto;
+}

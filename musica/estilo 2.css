@@ -1,0 +1,57 @@
+body {
+    
+}
+
+.centro {
+    background: red;
+    width: 80%;
+    margin: 20px auto;
+}
+
+h1 {
+    color: #00468E;
+    font-family: arial;
+    font-size: 13px;
+}
+
+h2 {
+    color: rgba(0, 69, 142, 0.5);
+    font-family: Arial;
+    font-size: 11px;
+    font-style: italic;
+}
+
+p {
+    color: #333333;
+    font-family: arial;
+    font-size: 11px;
+}
+
+span {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.igo {
+    color:red;
+}
+
+.xuxa {
+    color:blue;
+}
+
+.giu{
+    background: #333333;
+}
+
+.ju{
+    color: #FFFFFF;
+}
+
+.jubinha {
+    text-decoration: underline;
+}
+
+#id {
+
+}
