@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*equipe 3*/
+        /* Reset de CSS, esse asterisco é utilizado para mudar todo o estilo da pagina*/
+        * {
+            color: rgb(141, 115, 165);
+            margin: 10px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: rgb(165, 216, 218);
+        }
+
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 26px;
+            margin: 10px 0;
+        }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                margin: 0 auto 0 auto;
+                background: rgb(220, 220, 245);
+            }
+            label {
+                margin: 20px auto 0;
+                width: 80%;
+            }
+
+            input[type="submit"] :hover {
+                background: rgb(144, 144, 179);
+                font-size: 24px;
+                margin: 15px auto;
+                max-width: 325px;
+            }
+
+            input[type="submit"] {
+                border: 1px solid rgb(0, 0, 0);
+                font-size: 18px;
+                padding: 1%;
+                max-width: 350px;
+                margin: 10px auto;
+                cursor: pointer;
+            }
+
+            input {
+                background: transparent; /*deixar o fundo do elemento transparente*/
+                outline: none; /*tirar a borda branca do elemento, o outline só aparece quando vc clica*/
+                border: 0; /* tirar toda a borda e deixar apenas a de baixo (bottom) */
+                border-radius: 20px; /*deixa canto da borda arredondado*/
+                border-bottom: 1px solid rgb(0, 0, 0); /*mudar a expesssura da borda, deixar ela solida e mudar a cor*/
+                /* border-top: 1px solid #FFF;
+                border-right: 1px double red;
+                border-left: 2px dotted #FFF;
+                border-bottom: 1px dashed #FFF;
+                é possivel estilizar cada parte das bordas de um jeito */
+                width: 80%;
+                margin: 20px auto;
+                transition: all 2s;
+            }
+
+
+    </style>
+
+
+</head>
+<body>
+    <h1> Exemplo de formulario </h1>
+
+    <form method="post"> <!--com o metodo post as informações do usuario não ficarão expostas na url (usado com informações pessoais, senhas etc.)-->
+        <!--com o metodo get a informação fica exposta na url (facil de acompanhar e monitorar, transparencia)-->
+        <label for="nome"> Nome da pessoa</label>
+        <input type="text" id="nome" minlength="10" name="nome"> <!--tipo do input: texto-->
+        <!--minlenght: são aceitados no minimo 10 caracteres-->
+
+        <label for="sobrenome"> Sobrenome da pessoa</label>
+        <input type="text" id="sobrenome" name="sobrenome">
+
+        <label for="email"> Email da pessoa</label>
+        <input type="text" id="email" maxlength="11" name="email" required> <!--Required: usado em qualquer input para mostrar q 
+        é obrigatório preencher um certo campo-->
+
+        <label for="phone"> Telefone da pessoa</label>
+        <input type="tel" id="phone" maxlength="11" name="phone"> <!--maxlenght: são aceitados no maximo 11 caracteres-->
+
+        <label for="sobrenome"> Documento da pessoa</label>
+        <input type="text" id="sobrenome" name="sobrenome">
+        
+        <label for="senha"> Senha</label>
+        <input type="password" id="senha" name="senha"> <!--colocando o campo senha aparece em caracteres-->
+        
+        <input type="buttom" value="blablabla"> <!--Criar um botão-->
+        <input type="submit" value="enviar"> <!--Value: o que vai estar escrito no botão-->
+        
+
+
+    </form>
+</body>
+</html>

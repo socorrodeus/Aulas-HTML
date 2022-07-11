@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Formulário</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family:Arial, Courier, monospace;
+        }        
+        
+        
+        /* EQUIPE 5 */
+        /* reset de css */
+        body {
+            background: #333 url(space.jpeg);
+        }
+
+        h1 {
+            text-align: center;
+            margin:3% 0;
+            color: #FFF;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width:80%;
+            margin: 0 auto 20px;
+            padding: 2%;
+            background: rgba(11,11,11,.7);
+        }
+
+        label {
+            color: #efefef;
+            margin: 4% 0 0;
+            font-size: 16px;
+        }
+
+        input {
+            color: #efefef;
+            background: transparent;
+            font-size: 16px;
+            border: 0;
+            padding: 2%;
+            border: 2px solid #efefef;;
+            border-bottom: 1px solid #fefefe;
+            border-radius: 0 20px 0 50px;
+            outline: 0; /* Outline remove a borda que aparece ao clicar em um input*/
+        }
+
+        input[type=submit] {
+            background: #efefef;
+            margin: 2% auto;
+            color: #333332;
+            width: 50%;
+            border: 0;
+            border-radius: 0;
+            cursor: pointer;
+            transition: all 0.6s;
+        }
+
+        input[type=submit]:hover {
+            border:0;
+            color: #efefef;
+            background: #222222;
+            width: 60%;
+        }   
+        
+        input:focus {
+            background: rgba(11,11,11,.5);;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* EQUIPE 3 */
+        body.modo-noturno {
+            /* background: #0ABAB5 url(generico.jpg) center bottom; */
+            background: #0ABABB;
+        }
+
+        .modo-noturno h1 {
+            text-align: center;
+            font-size: 26px;
+            margin: 10px 0;
+            color:#336699;
+        
+        }
+
+        .modo-noturno form {
+            border: 1px solid #fff;
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin: 0 auto 30px auto;
+            background: rgba(33,33,44,.5);
+        }
+
+        .modo-noturno label {
+            color:#07344e;
+            margin:20px auto 0;
+            width:80%;
+        }
+
+        .modo-noturno input {
+            background: transparent;
+            border: 0;
+            border-bottom: 2px solid #FFF;
+            outline: 0;
+            width:80%;
+            margin:20px auto 0;
+            transition: all 0.6s;
+        }
+
+        .modo-noturno input:focus {
+            border-bottom: 2px solid #336699;
+        }
+
+        .modo-noturno input[type="submit"] {
+            background: #07344e;
+            font-size:18px;
+            color: #FFFFFF;
+            padding: 1%;
+            max-width: 350px;
+            margin:10px auto;
+            border:0;
+            cursor: pointer;
+        }
+
+        .modo-noturno input[type="submit"]:hover {
+            background: #336699;
+            font-size:24px;
+            margin:15px auto;
+            max-width: 325px;
+        }
+
+        .modo-noturno input[type="submit"]:focus {
+            background: red;
+        }
+
+    </style>
+
+</head>
+<body id="body">
+
+    <h1>Exemplo de Formulário</h1>
+    <!--- DIV --->
+
+    <button onclick="troca_tema()">Trocar Fundo</button> <!--botão de trocar fundo, o nome onclick significa mudar algo ao clicar-->
+    
+    <button onclick="troca_conteudo()">Trocar Conteúdo</button>
+
+    <form id="formulario" method="get" action="">
+        <label for="nome">Nome da Pessoa</label>
+        <input type="text" id="nome" minlength="10" maxlength="11" name="nome2" required>
+        
+        <label for="sobrenome">Sobrenome da Pessoa</label>
+        <input type="text" id="sobrenome" name="sobrenome">
+
+        <label for="email">E-mail da Pessoa</label>
+        <input type="email" id="email" maxlength="11" name="email"> 
+
+        <label for="phone">Telefone da Pessoa</label>
+        <input type="tel" id="phone" maxlength="11" name="phone">
+
+        <label for="doc">Documento da Pessoa</label>
+        <input type="number" id="doc" maxlength="25" name="doc" placeholder="Escreva somente números">        
+
+        <label for="senha">Senha da Pessoa</label>
+        <input type="password" id="senha" name="senha">
+
+        <input type="submit" value="Beterraba">
+    </form>
+
+    <script>
+        function troca_tema() {
+            var elemento = document.getElementById("body"); /* Chamar elemento pelo seu ID. Ex esse esta chamando o ID do body*/
+            /*var elemento2 = document.getElementsByClassName();  - Chamar o elemento pela sua classe*/
+            elemento.classList.toggle("modo-noturno"); /* toggle é semelhante ao switch, ou seja mudar do modo claro pro escuro, se não tiver um elemento ele adiciona, se tiver ele remove*/
+        }
+
+        function troca_conteudo() {
+            var elemento = document.getElementById("formulario");
+            elemento.innerHTML = "<p> voce trocou o conteúdo </p>"; /*troca todo um conteudo de uma pg pelo que vc escrever nessas aspas*/
+        }
+    </script>
+</body>
+</html>
